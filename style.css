@@ -141,7 +141,7 @@ a {
 
 
 .haut {
-    background: rgb(20, 33, 72);
+    background:  #2f435e;
     border-top-right-radius: 90px;
     border-top-left-radius: 90px;
 
@@ -414,8 +414,9 @@ span#next:hover {
 }
 
 .services-list2 div {
-    background:  rgba(233, 148, 63, 0.512);
+    background:  #44566c;
     padding: 40px;
+    color:  #ececec;
     font-size: 13px;
     font-weight: 300;
     position: relative;
@@ -425,8 +426,9 @@ span#next:hover {
 }
 
 .services-list div {
-    background:rgba(233, 148, 63, 0.512);;
+    background:#44566c;
     padding: 40px;
+    color:  #ececec;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
