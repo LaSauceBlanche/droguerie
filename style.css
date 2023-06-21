@@ -10,7 +10,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 18px; /* width of the entire scrollbar */
+    width: 15px; /* width of the entire scrollbar */
   }
   
   body::-webkit-scrollbar-thumb {
@@ -122,8 +122,9 @@ a {
 }
 
 .et-hero-tab:hover {
-    color: white;
-    background: #aa66f3;
+    color: rgb(0, 0, 0);
+    transform: translateY(-10px);
+
     transition: all 0.5s ease;
 }
 
@@ -132,7 +133,7 @@ a {
     bottom: 0;
     width: 0;
     height: 6px;
-    background: rgba(233, 148, 63, 0.512);
+    background: rgba(0, 0, 0, 0.692);
     transition: left 0.3s ease;
 }
 
