@@ -9,6 +9,21 @@ body {
 
 }
 
+.js-copy{
+    border-radius: 10px;
+    padding: 20px;
+    background: #e8a735;
+    color: white;
+    border: 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.44);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.js-copy:hover{
+    transform: translateY(-10px);
+
+}
+
 body::-webkit-scrollbar {
     width: 15px;
     /* width of the entire scrollbar */
@@ -157,7 +172,7 @@ a {
 
 .haut {
     background: rgb(233, 63, 63);
-  
+
 
 }
 
@@ -196,16 +211,17 @@ a {
 
 body .footer {
 
+    /* border-top: solid 1px rgba(0, 0, 0, 0.425); */
     /* position: absolute; */
     color: #000000;
     font-size: 15px;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     bottom: 0;
     z-index: 5;
     height: 100px;
-    background: s;
 }
 
 

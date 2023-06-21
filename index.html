@@ -11,7 +11,7 @@
 
 
 	<script src="https://kit.fontawesome.com/dde438efde.js" crossorigin="anonymous"></script>
-
+	<script src="copy_to_clipboard.js"></script>
 </head>
 
 <body>
@@ -72,7 +72,8 @@
 		<div class="hidden">
 			<h1 style="color:white">Nos articles en boutique <i class="fa-solid fa-store"></i></h1>
 
-			<h3 style="color:white">Vous y trouverez des souvenirs, de la décoration mais aussi de la mercerie !</h3>
+			<h3 style="color:white ">Vous y trouverez des souvenirs, de la décoration, des produits mais aussi de la
+				mercerie !</h3>
 		</div>
 
 		<div id="slider">
@@ -113,7 +114,7 @@
 
 	<!-- ----------------- LIVRAISON--------------- -->
 	<section class="et-slide" id="3">
-		<svg xmlns="http://www.w3.org/2000/svg" style=" position:absolute; top:-20px" viewBox="0 0 1440 320">
+		<svg xmlns="http://www.w3.org/2000/svg" style=" position:absolute; top:-110px" viewBox="0 0 1440 320">
 			<path fill="rgb(233, 63, 63)" fill-opacity="1"
 				d="M0,128L21.8,128C43.6,128,87,128,131,133.3C174.5,139,218,149,262,144C305.5,139,349,117,393,106.7C436.4,96,480,96,524,122.7C567.3,149,611,203,655,213.3C698.2,224,742,192,785,197.3C829.1,203,873,245,916,261.3C960,277,1004,267,1047,266.7C1090.9,267,1135,277,1178,245.3C1221.8,213,1265,139,1309,117.3C1352.7,96,1396,128,1418,144L1440,160L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z">
 			</path>
@@ -162,20 +163,21 @@
 		<div class="haut2">
 			<div class="hidden">
 
+				<div style="">
+					<p>
+					<h2>Venez nous rencontrer :</h2>
+					</p>
+					<h3>
+						<p>Lundi : Fermer</p>
+						<p>Mardi : 9h-12h30 14h30-19h</p>
+						<p>Mercredi : 9h-12h30 14h30-19h</p>
+						<p>Jeudi : 9h-12h30 14h30-19h</p>
+						<p>Vendredi : 9h-12h30 14h30-19h</p>
+						<p>Samedi : 9h-12h30 14h30-19h</p>
+						<p>Dimanche : Fermer</p>
+					</h3>
 
-				<p>
-				<h2>Venez nous rencontrer :</h2>
-				</p>
-				<h3>
-					<p>Lundi : Fermeture</p>
-					<p>Mardi : 9h-12h30 14h30-19h</p>
-					<p>Mercredi : 9h-12h30 14h30-19h</p>
-					<p>Jeudi : 9h-12h30 14h30-19h</p>
-					<p>Vendredi : 9h-12h30 14h30-19h</p>
-					<p>Samedi : 9h-12h30 14h30-19h</p>
-				</h3>
-
-
+				</div>
 			</div>
 		</div>
 	</section>
@@ -192,13 +194,15 @@
 		<div class="box"></div>
 
 		<div class="services-list">
+
 			<div>
 				<h2> Par mail :</h2>
 
 				<i class="fa-solid fa-envelope"></i>
 				<p>
-					drogueriealorgues@gmail.com
+					<span id="tocopy"> drogueriealorgues@gmail.com</span>
 				</p>
+				<input type="button" value="Copier" class="js-copy" data-target="#tocopy">
 			</div>
 
 
@@ -210,7 +214,6 @@
 					04 94 47 55 71
 				</p>
 			</div>
-
 		</div>
 
 
@@ -220,20 +223,20 @@
 
 	<div class="footer">
 
-<div>
-		©2023 Droguerie-Quincaillerie Lorguaise. Created by La Sauce &nbsp
-		<a href="https://www.instagram.com/_sweety_riv_/" style="color:rgb(0, 0, 0);"><i
-				class="fa-brands fa-instagram"></i></a>
-
-			</div>
+		<div>
+			©2023 Droguerie-Quincaillerie Lorguaise. Created by La Sauce &nbsp
+			<a href="https://www.instagram.com/_sweety_riv_/" style="color:rgb(0, 0, 0);"><i
+					class="fa-brands fa-instagram"></i></a>
 
 		</div>
 
-		<svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom:0px;" viewBox="0 0 1440 320">
-			<path fill="rgb(233, 63, 63)" fill-opacity="1"
-				d="M0,128L18.5,138.7C36.9,149,74,171,111,186.7C147.7,203,185,213,222,213.3C258.5,213,295,203,332,208C369.2,213,406,235,443,240C480,245,517,235,554,218.7C590.8,203,628,181,665,176C701.5,171,738,181,775,197.3C812.3,213,849,235,886,240C923.1,245,960,235,997,197.3C1033.8,160,1071,96,1108,101.3C1144.6,107,1182,181,1218,186.7C1255.4,192,1292,128,1329,112C1366.2,96,1403,128,1422,144L1440,160L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z">
-			</path>
-		</svg>
+	</div>
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom:0px;" viewBox="0 0 1440 320">
+		<path fill="rgb(233, 63, 63)" fill-opacity="1"
+			d="M0,128L18.5,138.7C36.9,149,74,171,111,186.7C147.7,203,185,213,222,213.3C258.5,213,295,203,332,208C369.2,213,406,235,443,240C480,245,517,235,554,218.7C590.8,203,628,181,665,176C701.5,171,738,181,775,197.3C812.3,213,849,235,886,240C923.1,245,960,235,997,197.3C1033.8,160,1071,96,1108,101.3C1144.6,107,1182,181,1218,186.7C1255.4,192,1292,128,1329,112C1366.2,96,1403,128,1422,144L1440,160L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z">
+		</path>
+	</svg>
 
 
 
