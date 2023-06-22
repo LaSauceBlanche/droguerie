@@ -318,9 +318,10 @@ a {
 
 @media (min-width: 800px) {
 
-    .hamhidden{
+    .hamhidden {
         display: none;
     }
+
     .et-hero-tabs h1,
     .et-slide h1 {
         font-size: 3rem;
