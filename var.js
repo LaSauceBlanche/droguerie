@@ -207,3 +207,9 @@ function docopy() {
         selection.removeAllRanges();
     }
 }
+
+
+
+
+
+
