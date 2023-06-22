@@ -21,9 +21,18 @@ body {
     gap: 4rem;
 }
 
+.bouton {
 
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--second-color);
+    color: white;
+    border: 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.44);
+    transition: 0.5s;
+    cursor: pointer;
 
-
+}
 
 
 
@@ -297,7 +306,7 @@ a {
         margin-left: 0;
         border-radius: 15px;
         box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.321);
-        
+
 
     }
 }
