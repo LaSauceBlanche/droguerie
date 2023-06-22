@@ -1,18 +1,39 @@
+:root {
+    --main-bg-color: rgb(233, 63, 63);
+    --second-color: #e8a735;
+}
+
+
 body {
     margin: 0;
     padding: 0;
-
     overflow-x: hidden;
     background: #fefefe;
-
     font-family: "Century Gothic", 'Lato', sans-serif;
-
 }
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
 
 .js-copy {
     border-radius: 10px;
     padding: 20px;
-    background: #e8a735;
+    background: var(--second-color);
     color: white;
     border: 0;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.44);
@@ -22,12 +43,10 @@ body {
 
 .js-copy:hover {
     transform: translateY(-10px);
-
 }
 
 body::-webkit-scrollbar {
     width: 15px;
-    /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -35,35 +54,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-.box {
-    position: absolute;
-    max-width: 600px;
-    width: 100%;
-    height: 500px;
-    background: #e8a735;
-    border-top-right-radius: 130px;
-    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.44);
-    border-top-left-radius: 130px;
-    border-bottom-right-radius: 130px;
-    border-bottom-left-radius: 130px;
 
-}
 
-.box2 {
-    z-index: 1;
-    position: absolute;
-    max-width: 400px;
-    width: 100%;
-    margin-left: 300px;
-    margin-top: 300px;
-    height: 400px;
-    background: #e8a735;
-    border-top-right-radius: 130px;
-    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.44);
-    border-top-left-radius: 130px;
-    border-bottom-right-radius: 130px;
-    border-bottom-left-radius: 130px;
-}
+
+
 
 .text {
 
@@ -188,15 +182,21 @@ a {
 
 
 .haut {
-    background: rgb(233, 63, 63);
+    background: var(--main-bg-color);
 
 
 }
 
 .haut2 {
     z-index: 2;
-    padding: 50px;
-    background: rgb(233, 63, 63);
+    max-width: 400px;
+    max-height: 400px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: var(--main-bg-color);
     border-top-right-radius: 130px;
     border-top-left-radius: 130px;
     border-bottom-right-radius: 130px;
@@ -221,6 +221,63 @@ a {
     .et-hero-tab {
         font-size: 1rem;
     }
+
+
+    .box2 {
+        z-index: 1;
+        position: absolute;
+        max-width: 400px;
+        width: 100%;
+        margin-left: 172px;
+        margin-top: 233px;
+        height: 400px;
+        background: var(--second-color);
+        border-top-right-radius: 130px;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.44);
+        border-top-left-radius: 130px;
+        border-bottom-right-radius: 130px;
+        border-bottom-left-radius: 130px;
+    }
+
+    .box {
+        position: absolute;
+        max-width: 600px;
+        width: 100%;
+        height: 430px;
+        background: var(--second-color);
+        border-top-right-radius: 130px;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.44);
+        border-top-left-radius: 130px;
+        border-bottom-right-radius: 130px;
+        border-bottom-left-radius: 130px;
+    }
+
+    .services-list2 i {
+        font-size: 30px;
+    }
+
+    .services-list i {
+        font-size: 30px;
+    }
+
+    .services-list2 p {
+        font-size: 20px;
+    }
+
+    .services-list p {
+        font-size: 20px;
+    }
+
+
+    .services-list {
+        position: absolute;
+        max-width: 1000px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 100px;
+        margin-top: 50px;
+    }
 }
 
 /* -----FOOTER -----------*/
@@ -243,31 +300,6 @@ body .footer {
 }
 
 
-
-@keyframes bubble-size {
-
-    0%,
-    75% {
-        width: var(--size, 4rem);
-        height: var(--size, 4rem);
-    }
-
-    100% {
-        width: 0rem;
-        height: 0rem;
-    }
-}
-
-@keyframes bubble-move {
-    0% {
-        bottom: -4rem;
-    }
-
-    100% {
-        bottom: var(--distance, 10rem);
-    }
-}
-
 /* autot tesxt */
 
 
@@ -275,7 +307,7 @@ body .footer {
     width: 100%;
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #e8a735;
+    border-right: .15em solid var(--second-color);
     /* The typwriter cursor */
     white-space: nowrap;
     /* Keeps the content on a single line */
@@ -308,7 +340,7 @@ body .footer {
     }
 
     50% {
-        border-color: #e8a735;
+        border-color: var(--second-color);
     }
 }
 
@@ -392,7 +424,7 @@ li.slider-image img {
 
 .flex-control-paging li a:hover,
 .flex-control-paging li a.flex-active {
-    background: #e8a735;
+    background: var(--second-color);
 }
 
 span#prev,
@@ -430,29 +462,18 @@ span#next:hover {
     opacity: 0.8;
 }
 
-.services-list2 i {
-    font-size: 30px;
-}
-
-.services-list i {
-    font-size: 30px;
-}
-
-.services-list2 p {
-    font-size: 20px;
-}
-
-.services-list p {
-    font-size: 20px;
-}
 
 .services-list {
-    width: 1000px;
+    position: absolute;
+    max-width: 1000px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 100px;
-    margin-top: 50px;
+    gap: 10%;
+    margin-top: -81px;
 }
+
+
 
 .services-list2 {
 
@@ -464,7 +485,7 @@ span#next:hover {
 }
 
 .services-list2 div {
-    background: #e8a735;
+    background: var(--second-color);
     padding: 40px;
     color: #ececec;
     font-size: 13px;
@@ -476,7 +497,7 @@ span#next:hover {
 }
 
 .services-list div {
-    background: rgb(233, 63, 63);
+    background: var(--main-bg-color);
     padding: 40px;
     z-index: 2;
     color: #ececec;

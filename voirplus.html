@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artciles</title>
+    <link rel="shortcut icon" href="img/magasin.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <style>
+        @import "https://unpkg.com/open-props";
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+
+        .page {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            grid-template-areas: "header" "main";
+            color: black;
+            background-color: white;
+            min-height: 100vh;
+            font-family: var(--font-sans);
+            font-family: "Century Gothic", 'Lato', sans-serif;
+
+        }
+
+        .page__header {
+            grid-area: header;
+            margin-top: 150px;
+        }
+
+        .page__main {
+            grid-area: main;
+        }
+
+        .header {
+            padding: var(--size-9) var(--size-6);
+            text-align: center;
+        }
+
+        .header__title {
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 0.6rem;
+        }
+
+        .header__desc {
+            font-size: var(--font-size-fluid-1);
+            line-height: var(--font-lineheight-2);
+        }
+
+        .main {
+            display: grid;
+            grid-template-areas: "gallery";
+        }
+
+        .main__gallery {
+            grid-area: gallery;
+        }
+
+        .gallery {
+            margin-top: 90px;
+            display: flex;
+            gap: var(--size-2);
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: var(--size-2);
+            padding-bottom: 10em;
+        }
+
+        .gallery::before {
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.423) 70%);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 20vh;
+        }
+
+        .gallery__col {
+            flex: calc(25% - var(--size-2));
+            max-width: calc(25% - var(--size-2));
+        }
+
+        @media screen and (max-width: 48em) {
+            .gallery__col {
+                flex: calc(50% - var(--size-2));
+                max-width: calc(50% - var(--size-2));
+            }
+        }
+
+        @media screen and (max-width: 36em) {
+            .gallery__col {
+                flex: calc(100% - var(--size-2));
+                max-width: calc(100% - var(--size-2));
+            }
+        }
+
+        .gallery__img {
+            margin-bottom: var(--size-2);
+        }
+
+
+        .retour {
+            margin-top: 50px;
+            border-radius: 10px;
+            padding: 20px;
+            background: var(--second-color);
+            color: white;
+            border: 0;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.44);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .retour:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+
+    <body class="page">
+        <svg xmlns="http://www.w3.org/2000/svg" style="top:0; z-index:1; position:absolute" viewBox="0 0 1440 320">
+            <path fill=" rgb(233, 63, 63)" fill-opacity="1"
+                d="M0,192L21.8,192C43.6,192,87,192,131,165.3C174.5,139,218,85,262,101.3C305.5,117,349,203,393,202.7C436.4,203,480,117,524,90.7C567.3,64,611,96,655,101.3C698.2,107,742,85,785,90.7C829.1,96,873,128,916,165.3C960,203,1004,245,1047,266.7C1090.9,288,1135,288,1178,266.7C1221.8,245,1265,203,1309,208C1352.7,213,1396,267,1418,293.3L1440,320L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z">
+            </path>
+        </svg>
+
+        <header class="header page__header" style="z-index: 2;">
+            <h1 class="header__title">Nos artciles </h1>
+            <a href="index.html">
+                <input type="button" value="retour" class="retour">
+            </a>
+        </header>
+        <main class="main page__main" style="z-index: 2;">
+            <div class="gallery main__gallery">
+                <div class="gallery__col"><img class="gallery__img" src="img/photo/1.jpg"><img class="gallery__img"
+                        src="img/photo/2.jpg"><img class="gallery__img" src="img/photo/3.jpg"><img class="gallery__img"
+                        src="img/photo/4.jpg"><img class="gallery__img" src="img/photo/5.jpg"><img class="gallery__img"
+                        src="img/photo/6.jpg"><img class="gallery__img" src="img/photo/25.jpg"></div>
+                <div class="gallery__col"><img class="gallery__img" src="img/photo/8.jpg"><img class="gallery__img"
+                        src="img/photo/9.jpg"><img class="gallery__img" src="img/photo/10.jpg"><img class="gallery__img"
+                        src="img/photo/11.jpg"><img class="gallery__img" src="img/photo/13.jpg"><img
+                        class="gallery__img" src="img/photo/24.jpg"><img class="gallery__img" src="img/photo/7.jpg">
+                </div>
+                <div class="gallery__col"><img class="gallery__img" src="img/photo/14.jpg"><img class="gallery__img"
+                        src="img/photo/15.jpg"><img class="gallery__img" src="img/photo/16.jpg"><img
+                        class="gallery__img" src="img/photo/17.jpg"><img class="gallery__img"
+                        src="img/photo/18.jpg"><img class="gallery__img" src="img/photo/12.jpg"></div>
+                <div class="gallery__col"><img class="gallery__img" src="img/photo/19.jpg"><img class="gallery__img"
+                        src="img/photo/20.jpg"><img class="gallery__img" src="img/photo/21.jpg"><img
+                        class="gallery__img" src="img/photo/22.jpg"><img class="gallery__img" src="img/photo/23.jpg">
+                </div>
+            </div>
+        </main>
+
+        <div class="footer">
+            <div>
+                ©2023 Droguerie-Quincaillerie Lorguaise. Created by La Sauce &nbsp
+                <a href="https://www.instagram.com/_sweety_riv_/" style="color:rgb(0, 0, 0);"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" style="" viewBox="0 0 1440 320">
+            <path fill=" rgb(233, 63, 63)" fill-opacity="1"
+                d="M0,224L40,234.7C80,245,160,267,240,240C320,213,400,139,480,138.7C560,139,640,213,720,208C800,203,880,117,960,112C1040,107,1120,181,1200,202.7C1280,224,1360,192,1400,176L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+            </path>
+        </svg>
+    </body>
+
+</body>
+
+</html>
