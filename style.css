@@ -1,3 +1,6 @@
+/* CSS absolument pas trié, un vrais bordel pour s'y retrouver amuse toi bien*/
+
+
 :root {
     --main-bg-color: rgb(233, 63, 63);
     --second-color: #e8a735;
@@ -382,118 +385,106 @@ body .footer {
 /*------slider image -----*/
 
 
-ul,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
-
-}
-
-ol,
-ul {
-    list-style: none;
-}
 
 
-div#slider {
-    border: 5px solid #ffffff;
-    border-radius: 5px;
+#slider {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 100px;
+    max-width: 600px;
     position: relative;
     overflow: hidden;
-    width: 1000px;
-    max-width: 100%;
-    height: 400px;
-    margin: 20px auto 5px;
-    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.692);
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+    ;
 }
 
-ul#frontpage-slider {
-    width: 1000%;
+.slide {
+    width: 100%;
+
+    display: none;
+    animation-name: fade;
+    animation-duration: 1s;
+
 }
 
-li.slider-image {
-    float: left;
-    -webkit-transition: all .7s ease;
-    transition: all .7s ease;
-    width: 1000px;
-    max-width: 100%;
+img {
+    width: 100%;
 }
 
-li.slider-image img {
-    max-height: 500px;
-    width: 1000px;
-    vertical-align: middle;
-    border: 0;
-    -ms-interpolation-mode: bicubic;
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-.flex-control-paging {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.flex-control-paging li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.flex-control-paging li a {
-    display: inline-block;
-    background: white;
-    height: 12px;
-    width: 12px;
-    text-indent: 200%;
-    overflow: hidden;
-    cursor: pointer;
-    -moz-border-radius: 1px;
-    -khtml-border-radius: 1px;
-    -webkit-border-radius: 1px;
-    border-radius: 50%;
-}
-
-.flex-control-paging li a:hover,
-.flex-control-paging li a.flex-active {
-    background: var(--second-color);
-}
-
-span#prev,
-span#next {
+.controls {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    color: #fff;
-    line-height: 60px;
-    background: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    padding: 15px 10px;
+    border-radius: 5px;
+
+}
+
+.controls:hover {
+    background: white;
+    transition: 0.3s;
+}
+
+.controls:active {
+    color: grey;
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
+}
+
+#dots-con {
+
     text-align: center;
-    top: 0;
-    bottom: 0;
-    display: block;
-    margin: auto 0;
+}
+
+.dot {
+    display: inline-block;
+    background: grey;
+    padding: 8px;
     border-radius: 50%;
-    opacity: 0.3;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    cursor: pointer;
+    margin: 10px 5px;
 }
 
-span#prev {
-    left: -20px;
-    transform: rotate(-90deg);
+.active {
+    background: rgb(7, 67, 213);
 }
 
-span#next {
-    right: -20px;
-    transform: rotate(90deg);
+@media (max-width:576px) {
+    #slider {
+        width: 100%;
+
+    }
+
+    .controls {
+        font-size: 1em;
+    }
+
+    #dots-con {
+        display: none;
+    }
 }
 
-span#prev:hover,
-span#next:hover {
-    opacity: 0.8;
-}
+
+
+
 
 
 .services-list {
