@@ -214,7 +214,9 @@ a {
 
 }
 
-
+.maphidden{
+    display: none;
+}
 
 @media (max-width: 800px) {
     .menuhidden {
@@ -414,6 +416,12 @@ a {
 
 
     }
+
+
+.services-list div {
+
+padding: 40px;
+}
 }
 
 
@@ -608,7 +616,7 @@ img {
     float: right;
     /* margin-left: 60px; */
     display: grid;
-    grid-gap: 50px;
+    grid-gap: 10px;
 }
 
 .services-list2 div {
@@ -625,7 +633,7 @@ img {
 
 .services-list div {
     background: var(--main-bg-color);
-    padding: 40px;
+    padding: 0px;
     z-index: 2;
     color: #ececec;
     font-size: 13px;
