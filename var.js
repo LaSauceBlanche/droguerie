@@ -119,50 +119,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 //  slider d'image 
 
 
-var slides = document.querySelectorAll(".slide");
-var dots = document.querySelectorAll(".dot");
-var index = 0;
-
-
-function prevSlide(n) {
-    index += n;
-    console.log("prevSlide is called");
-    changeSlide();
-}
-
-function nextSlide(n) {
-    index += n;
-    changeSlide();
-}
-
-changeSlide();
-
-function changeSlide() {
-
-    if (index > slides.length - 1)
-        index = 0;
-
-    if (index < 0)
-        index = slides.length - 1;
-
-
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-
-        dots[i].classList.remove("active");
-
-
-    }
-
-    slides[index].style.display = "block";
-    dots[index].classList.add("active");
-
-
-
-}
-
-
 // COPIE LE TEXT
 
 
@@ -213,3 +169,66 @@ function docopy() {
 
 
 
+
+
+
+const images = document.querySelectorAll('img')
+const totalImages = images.length;
+
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+
+const selectedImgBtns = document.querySelectorAll('.img-nav-item')
+
+let currentImgId = 0;
+
+const hideAllImages = () => {
+    images.forEach(img => {
+        // hide all images
+        if (img.classList[0] === 'visible') {
+            img.classList.remove('visible')
+            img.classList.add('hidden2')
+        }
+    })
+}
+
+const traverseImages = (direction) => {
+    hideAllImages()
+
+    if (direction === 'prev') {
+        currentImgId = currentImgId ? (currentImgId - 1) % totalImages : totalImages - 1
+    } else {
+        currentImgId = (currentImgId + 1) % totalImages
+    }
+
+    images[currentImgId].classList.remove('hidden2')
+    images[currentImgId].classList.add('visible')
+
+    selectedImgBtns.forEach(btn => btn.classList.remove('img-nav-item-selected'))
+    selectedImgBtns[currentImgId].classList.add('img-nav-item-selected')
+}
+
+const handleBtnClick = (btn, i) => {
+    // not sure about this fuckery, but it works
+    if (btn.classList.forEach(btnClass => {
+        if (btnClass === 'img-nav-item-selected') {
+            return true
+        }
+    })) {
+        return
+    }
+
+    selectedImgBtns.forEach(btn => btn.classList.remove('img-nav-item-selected'))
+    btn.classList.add('img-nav-item-selected')
+    hideAllImages()
+    currentImgId = i
+    images[currentImgId].classList.remove('hidden2')
+    images[currentImgId].classList.add('visible')
+}
+
+prevBtn.addEventListener('click', () => traverseImages('prev'))
+nextBtn.addEventListener('click', () => traverseImages('next'))
+
+selectedImgBtns.forEach((btn, i) => {
+    btn.addEventListener('click', () => handleBtnClick(btn, i))
+})
