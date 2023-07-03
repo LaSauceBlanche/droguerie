@@ -116,6 +116,7 @@ a {
     background: #fefefe;
     text-align: center;
     padding: 0 2em;
+
 }
 
 .et-hero-tabs h1 {
@@ -173,27 +174,16 @@ a {
 
 .et-hero-tab:hover {
     color: #8c0004;
-    transform: translateY(-10px);
-
+    background: transparent;
+    transform: translateY(-5px);
+text-decoration: none;
     transition: all 0.5s ease;
 }
-
-.et-hero-tab-slider {
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 6px;
-    background: #8c0004;
-    transition: left 0.3s ease;
-}
-
 
 
 
 .haut {
     background: var(--main-bg-color);
-
-
 }
 
 .haut2 {
@@ -303,7 +293,7 @@ a {
     }
 
     .menu__item:hover {
-        background-color: #CFD8DC;
+        background-color: #cfd8dc55;
     }
 
 
@@ -336,6 +326,15 @@ a {
 
     .et-hero-tab {
         font-size: 1rem;
+        
+    }
+    .et-hero-tab-slider {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 6px;
+        background: #8c0004;
+        transition: left 0.3s ease;
     }
 
 
@@ -413,13 +412,10 @@ a {
         margin-left: 0;
         border-radius: 15px;
         box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.321);
-
-
     }
 
 
     .services-list div {
-
         padding: 40px;
     }
 }
@@ -770,7 +766,7 @@ button:hover {
     .inner-circle {
         width: 2vh;
         height: 2vh;
-        border: 0.5vh solid white;
+        border: 0.5vh solid rgb(255, 255, 255);
     }
 
     .outer-circle {
