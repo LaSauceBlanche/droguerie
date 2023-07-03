@@ -237,7 +237,7 @@ text-decoration: none;
 
     .menu__btn {
         position: fixed;
-        top: 20px;
+        top: 30px;
         left: 20px;
         width: 26px;
         height: 26px;
@@ -328,7 +328,7 @@ text-decoration: none;
         font-size: 1rem;
         
     }
-    .et-hero-tab-slider {
+    /* .et-hero-tab-slider {
         position: absolute;
         bottom: 0;
         width: 0;
@@ -336,7 +336,7 @@ text-decoration: none;
         background: #8c0004;
         transition: left 0.3s ease;
     }
-
+ */
 
     .box2 {
         z-index: 1;
